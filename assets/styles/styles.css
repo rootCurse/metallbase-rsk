@@ -1,0 +1,477 @@
+:root {
+    --bg: #151515;
+    --panel: #232323;
+    --muted: #9e9e9e;
+    --text: #ffffff;
+    --accent: #FF6B00;
+    --accent-2: #0DD46A;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.45;
+}
+
+main {
+    background: linear-gradient(180deg, #111 0%, var(--bg) 100%);
+}
+
+/* Контейнер */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* --------------------------- */
+/* Хедер */
+.site-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 40;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.2));
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo__mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #333, #111);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), inset 0 -2px 6px rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.logo__text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: var(--text);
+    font-size: 18px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 22px;
+}
+
+.main-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s;
+}
+
+.main-nav a:hover {
+    color: var(--text);
+}
+
+.header-actions .btn {
+    margin-left: 10px;
+}
+
+/* --------------------------- */
+/* Кнопки */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.12s ease, box-shadow 0.12s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn--primary {
+    background: var(--accent);
+    color: var(--text);
+    box-shadow: 0 6px 18px rgba(255, 107, 0, 0.12), inset 0 -2px 8px rgba(255, 255, 255, 0.02);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid rgba(13, 212, 106, 0.12);
+    padding: 10px 18px;
+}
+
+.btn--call {
+    background: linear-gradient(180deg, #ff7a22, #ff5a00);
+    color: #fff;
+}
+
+.btn--outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text);
+}
+
+/* --------------------------- */
+/* HERO */
+.hero {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+    background: url("../images/hero-image.jpg") center/cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.7) 80%);
+    z-index: 1;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    padding: 80px 0;
+}
+
+.hero__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    margin: 0 0 12px 0;
+    line-height: 1.03;
+    letter-spacing: -1px;
+}
+
+.hero__subtitle {
+    color: var(--muted);
+    margin: 0 0 28px 0;
+    font-size: 18px;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* --------------------------- */
+/* Sections */
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    margin: 0 0 26px;
+    color: var(--text);
+}
+
+/* --------------------------- */
+/* Catalog */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.catalog-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.catalog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6);
+}
+
+.catalog-card__img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    filter: contrast(0.95) saturate(0.8);
+}
+
+.catalog-card__body {
+    padding: 18px;
+}
+
+.catalog-card__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+.catalog-card__price {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.catalog-actions{
+    display: none;
+}
+
+/* --------------------------- */
+/* Advantages */
+.advantages-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.advantage__head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.advantage {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.advantage__icon {
+    min-width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    background: rgba(255, 107, 0, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.advantage__title {
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.advantage__desc {
+    color: var(--muted);
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+/* --------------------------- */
+/* Delivery */
+.delivery-inner {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.delivery-info {
+    flex: 1;
+    color: var(--muted);
+}
+
+.delivery-map {
+    flex: 1;
+}
+
+.map-placeholder {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55));
+    border-radius: 12px;
+    height: 260px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+}
+
+/* --------------------------- */
+/* Contacts */
+.contacts-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.contacts-card {
+    background: var(--panel);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.contacts-card h3 {
+    margin: 0 0 8px 0;
+}
+
+.contacts-phone {
+    display: block;
+    font-size: 18px;
+    color: var(--text);
+    margin: 8px 0;
+}
+
+/* --------------------------- */
+/* Footer */
+.site-footer {
+    padding: 22px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    background: linear-gradient(180deg, #111 0%, var(--bg) 100%);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+}
+
+.footer-inner a {
+    color: var(--muted)
+}
+
+/* --------------------------- */
+/* Адаптив */
+@media (max-width: 1100px) {
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacts-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-inner {
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 40px 0;
+    }
+
+    .hero__title {
+        font-size: 34px;
+    }
+
+    .container {
+        padding: 0 18px;
+    }
+
+    .header-actions .btn {
+        display: none;
+    }
+
+    .footer-inner {
+        display: block;
+    }
+
+    .delivery-map {
+        display: none;
+    }
+
+    .delivery-info ul {
+        padding-left: 16px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+    font-size: 28px;
+    margin: 0 0 13px;
+    }
+
+    .advantages-container{
+        overflow-x: scroll;
+    }
+
+    .mobile-hidden .catalog-card:nth-child(n + 5){
+        display: none;
+    }
+
+    .mobile-hidden .catalog-actions{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .show-more{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.12s ease, box-shadow 0.12s;
+    
+    vertical-align: middle;
+    }
+}
