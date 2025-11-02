@@ -9,6 +9,11 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="icon" type="image/png" href="./assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -37,9 +42,9 @@
       "mainEntity": [
         {
           "@type": "Product",
-          "name": "Нержавеющие трубы",
+          "name": " Шестигранник",
           "image": "https://example.com/images/truby.jpg",
-          "description": "Стальные трубы различных диаметров и типов: водогазопроводные, профильные, электросварные, бесшовные.",
+          "description": "Стальные трубы различных диаметров и типов: профильные, электросварные, горчекатанные, бесшовные, холоднокатаная, нержавеющие .",
           "category": "Металлопрокат"
         },
         {
@@ -128,7 +133,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="logo">
-                <div class="logo__mark" aria-hidden="true"></div>
+                <img src="./assets/images/logo.png" alt="Logo" style="width: 48px; height: 48px;">
                 <div class="logo__text">Металлобаза</div>
             </div>
 
@@ -241,19 +246,11 @@
                 <h2 class="section-title">Каталог</h2>
 
                 <div class="catalog-grid">
-                    <article class="catalog-card">
-                        <img src="assets/profile.jpg" alt="Трубы" class="catalog-card__img">
-                        <div class="catalog-card__body">
-                            <h3 class="catalog-card__title">Нержавеющие трубы</h3>
-                            <div class="catalog-card__price">от 14,500 ₽</div>
-                        </div>
-                    </article>
 
                     <article class="catalog-card">
                         <img src="assets/profile.jpg" alt="Трубы" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Профильные трубы</h3>
-                            <div class="catalog-card__price">от 14,500 ₽</div>
                         </div>
                     </article>
 
@@ -261,7 +258,6 @@
                         <img src="assets/armature.jpg" alt="Листы" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Листы</h3>
-                            <div class="catalog-card__price">от 12,000 ₽</div>
                         </div>
                     </article>
 
@@ -269,7 +265,6 @@
                         <img src="assets/sheet.jpg" alt="Профлисты" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Профлисты</h3>
-                            <div class="catalog-card__price">от 11,000 ₽</div>
                         </div>
                     </article>
 
@@ -277,7 +272,6 @@
                         <img src="assets/pipes.jpg" alt="Проволока" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Проволока</h3>
-                            <div class="catalog-card__price">от 19,900 ₽</div>
                         </div>
                     </article>
 
@@ -285,7 +279,6 @@
                         <img src="assets/profile.jpg" alt="Арматура" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Арматура</h3>
-                            <div class="catalog-card__price">от 14,500 ₽</div>
                         </div>
                     </article>
 
@@ -293,7 +286,6 @@
                         <img src="assets/profile.jpg" alt="Двутавровая балка" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Двутавровая балка</h3>
-                            <div class="catalog-card__price">от 14,500 ₽</div>
                         </div>
                     </article>
 
@@ -301,7 +293,6 @@
                         <img src="assets/profile.jpg" alt="Швеллер" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Швеллер</h3>
-                            <div class="catalog-card__price">от 14,500 ₽</div>
                         </div>
                     </article>
 
@@ -309,7 +300,6 @@
                         <img src="assets/profile.jpg" alt="Уголок" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Уголок</h3>
-                            <div class="catalog-card__price">от 14,500 ₽</div>
                         </div>
                     </article>
 
@@ -317,7 +307,6 @@
                         <img src="assets/profile.jpg" alt="Круг" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Круг</h3>
-                            <div class="catalog-card__price">от 14,500 ₽</div>
                         </div>
                     </article>
 
@@ -325,7 +314,6 @@
                         <img src="assets/profile.jpg" alt="Полоса" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Полоса</h3>
-                            <div class="catalog-card__price">от 14,500 ₽</div>
                         </div>
                     </article>
 
@@ -333,14 +321,19 @@
                         <img src="assets/profile.jpg" alt="Квадрат" class="catalog-card__img">
                         <div class="catalog-card__body">
                             <h3 class="catalog-card__title">Квадрат</h3>
-                            <div class="catalog-card__price">от 14,500 ₽</div>
                         </div>
                     </article>
 
+                    <article class="catalog-card">
+                        <img src="assets/profile.jpg" alt="Шестигранник" class="catalog-card__img">
+                        <div class="catalog-card__body">
+                            <h3 class="catalog-card__title">Шестигранник</h3>
+                        </div>
+                    </article>
                 </div>
 
                 <div class="catalog-actions">
-                    <button id="ShowMore" class="show-more btn--ghost" >Показать еще</button>
+                    <button id="ShowMore" class="show-more btn--ghost">Показать еще</button>
                 </div>
             </div>
         </section>
@@ -428,7 +421,7 @@
                 if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
             });
         });
-        document.querySelector('#ShowMore').addEventListener('click',() => {
+        document.querySelector('#ShowMore').addEventListener('click', () => {
             document.querySelector('.mobile-hidden')?.classList.remove("mobile-hidden")
         })
     </script>
